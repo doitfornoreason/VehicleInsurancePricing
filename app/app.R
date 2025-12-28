@@ -1,11 +1,4 @@
-# Pure Premium Calculator Shiny App
-# - Collects ALL inputs from your summary (ID, AGE, GENDER, DRIVING_EXPERIENCE, EDUCATION,
-#   CREDIT_SCORE, VEHICLE_OWNERSHIP, VEHICLE_YEAR, MARRIED, CHILDREN, ANNUAL_MILEAGE,
-#   VEHICLE_TYPE, SPEEDING_VIOLATIONS, PAST_ACCIDENTS)
-# - Uses updated models (*.3) saved inside the app directory
-# - ID is typable; binary inputs show "yes"/"no" but pass 1/0
-# - Prevents negative numeric inputs (shows "please input positive numbers only")
-# - Red theme; results table shows "pure premium = probability of claim x conditional severity"
+
 
 suppressPackageStartupMessages({
   library(shiny)

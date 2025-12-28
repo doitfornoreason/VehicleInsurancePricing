@@ -1,0 +1,12 @@
+name: VehicleInsurancePricing
+title: VehicleInsurancePricing
+username: doitfornoreason
+account: doitfornoreason
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16357092
+bundleId: 11374728
+url: https://doitfornoreason.shinyapps.io/VehicleInsurancePricing/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

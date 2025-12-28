@@ -1,4 +1,0 @@
-"1","```r
-ownts2 <- ts(rnorm(30,0.7,0.5), frequency = 12, start = 2025)
-ccf(ownts2, ownts, 25)
-```"

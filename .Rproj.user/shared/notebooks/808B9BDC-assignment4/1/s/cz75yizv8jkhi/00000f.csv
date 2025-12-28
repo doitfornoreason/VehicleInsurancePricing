@@ -1,8 +1,0 @@
-"0","set.seed(67)"
-"0","train_indices <- sample(1:10000,8000)"
-"0","train_data <- data[train_indices, ]"
-"0","test_data <- data[-train_indices, ]"
-"0",""
-"0",""
-"0","train_data_x <- train_data %>% dplyr::select(-OUTCOME, -CLAIMS)"
-"0","test_data_x <- test_data %>% dplyr::select(-OUTCOME, -CLAIMS)"

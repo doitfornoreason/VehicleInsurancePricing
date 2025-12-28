@@ -1,6 +1,0 @@
-"0","claimoutcome_df <- train_data_imputed %>%select(-CLAIMS)"
-"0","mean(claimoutcome_df$OUTCOME)"
-"1","[1]"
-"1"," 0.31675"
-"1","
-"

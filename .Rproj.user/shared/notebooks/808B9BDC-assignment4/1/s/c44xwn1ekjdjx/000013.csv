@@ -1,2 +1,0 @@
-"0","boxplot(train_data_imputed$CLAIMS ~ train_data_imputed$OUTCOME, "
-"0","        main = ""Boxplot of claim sizes by outcome"", xlab = ""OUTCOME"", ylab = ""CLAIMS"")"

@@ -1,6 +1,0 @@
-"1","```r
-data <- log(SUVA$dailyallow[SUVA$dailyallow>0])
-fit.mme <- fitdist(data, \"lnorm\", method = \"mme\", order=1:2)
-plot(fit.mme)
-
-```"

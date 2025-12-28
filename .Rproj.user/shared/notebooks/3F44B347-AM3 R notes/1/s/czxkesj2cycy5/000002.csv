@@ -1,8 +1,0 @@
-"1","```r
-# fitting EVD for loggamma values 
-fit.logg <- extRemes::fevd(blockmax$loggblock)
-# getting estimates
-fit.logg
-#getting plot
-plot(fit.logg)
-```"

@@ -1,4 +1,0 @@
-"0",""
-"0","boxplot(log(train_data[train_data$CLAIMS>0,""CLAIMS"", drop = T]) ~ is.na(train_data[train_data$CLAIMS>0,""CREDIT_SCORE"", drop = T]),"
-"0","        xlab = ""is creditscore missing?"", ylab = ""log(claim size)"")"
-"0",""

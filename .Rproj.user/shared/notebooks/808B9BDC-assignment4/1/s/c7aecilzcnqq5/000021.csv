@@ -1,6 +1,0 @@
-"0","num_cols <-  data %>% dplyr::select(where(is.numeric))"
-"0",""
-"0","num_cols <-  num_cols[!is.na(num_cols$CREDIT_SCORE) & "
-"0","                      !is.na(num_cols$ANNUAL_MILEAGE),]"
-"0","num_cols <-  num_cols %>% select(-ID)"
-"0","corrplot(cor(num_cols), type = ""lower"", diag = F)"

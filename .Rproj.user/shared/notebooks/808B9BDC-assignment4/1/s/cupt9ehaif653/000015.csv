@@ -1,3 +1,0 @@
-"0",""
-"0","n <- nobs(outcome.1.probit)"
-"0","AIC(reduced, outcome.1.probit, k = log(n))  # BIC"
