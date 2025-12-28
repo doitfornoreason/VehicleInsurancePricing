@@ -1,0 +1,14 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZml0Lm1sZSA8LSBmaXRkaXN0KGRhdGEsIFwibG5vcm1cIiwgbWV0aG9kID0gXCJtbGVcIilcbnBsb3QoZml0Lm1sZSlcbmBgYCJ9 -->
+
+```r
+fit.mle <- fitdist(data, \"lnorm\", method = \"mle\")
+plot(fit.mle)
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+fit.mle <- fitdist(data, \"lnorm\", method = \"mle\")
+plot(fit.mle)
+```"

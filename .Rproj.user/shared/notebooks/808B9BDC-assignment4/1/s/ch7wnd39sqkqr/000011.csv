@@ -1,0 +1,3 @@
+"0",""
+"0","hist(pred_lognormal - actual_claims, breaks = 100, xlim = c(-80000, 40000),"
+"0","     main = 'lognormal model errors')"

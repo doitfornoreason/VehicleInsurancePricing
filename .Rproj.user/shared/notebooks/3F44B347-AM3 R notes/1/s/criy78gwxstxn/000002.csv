@@ -1,0 +1,20 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBleGFtcGxlIG9mIGNvZGluZyB0aGUgZGF0YVxuZXhpdGFnZSA8LSBybm9ybSgxMDAsIG1lYW4gPSA2MCwgc2QgPSA1KVxuZGVhdGggPC0gcmJpbm9tKG4gPSAxMDAsIHNpemUgPSAxLCBwID0gMC40KVxuXG5jZW5zZGF0YSA8LSBjb2RlcmlnaHRjZW5zKGV4aXRhZ2UsIGRlYXRoKVxuYGBgIn0= -->
+
+```r
+# example of coding the data
+exitage <- rnorm(100, mean = 60, sd = 5)
+death <- rbinom(n = 100, size = 1, p = 0.4)
+
+censdata <- coderightcens(exitage, death)
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+# example of coding the data
+exitage <- rnorm(100, mean = 60, sd = 5)
+death <- rbinom(n = 100, size = 1, p = 0.4)
+
+censdata <- coderightcens(exitage, death)
+```"

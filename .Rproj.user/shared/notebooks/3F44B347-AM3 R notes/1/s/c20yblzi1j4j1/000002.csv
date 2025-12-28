@@ -1,0 +1,12 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2VyaWFsLnRlc3QoZml0LCBsYWdzLnB0ID0gMTIsIHR5cGUgPSBcIlBULmFkanVzdGVkXCIpXG5gYGAifQ== -->
+
+```r
+serial.test(fit, lags.pt = 12, type = \"PT.adjusted\")
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+serial.test(fit, lags.pt = 12, type = \"PT.adjusted\")
+```"

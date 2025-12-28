@@ -1,0 +1,1 @@
+"0","hist(residuals(outcome.2.logistic, type = ""deviance""), main = ""Histogram of Deviance Residuals"", xlab = ""Deviance Residuals"", breaks = 100)"

@@ -1,0 +1,22 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBmaXR0aW5nXG5maXQgPC0gbG0oY2hpY2tlbiB+dGltZShjaGlja2VuKSlcblxuIyBwbG90dGluZyByZXN1bHRcbnBsb3QudHMoY2hpY2tlbilcbmFibGluZShmaXQsIGNvbCA9IFwiYmx1ZVwiKVxuYGBgIn0= -->
+
+```r
+# fitting
+fit <- lm(chicken ~time(chicken))
+
+# plotting result
+plot.ts(chicken)
+abline(fit, col = \"blue\")
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+# fitting
+fit <- lm(chicken ~time(chicken))
+
+# plotting result
+plot.ts(chicken)
+abline(fit, col = \"blue\")
+```"

@@ -1,0 +1,12 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9ybWF0KEFSTUF0b01BKGFyPWMoMC42LDAuMyksbWE9YygtMC41LC0wLjIpLCAxMDApLCBkaWdpdHMgPSAyKVxuYGBgIn0= -->
+
+```r
+format(ARMAtoMA(ar=c(0.6,0.3),ma=c(-0.5,-0.2), 100), digits = 2)
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+format(ARMAtoMA(ar=c(0.6,0.3),ma=c(-0.5,-0.2), 100), digits = 2)
+```"

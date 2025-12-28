@@ -1,0 +1,14 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBmb3IgUHVyZSBBUiBtb2RlbFxubWxlLmZpdCA8LSBhci5tbGUocmVjLCBvcmRlciA9IDIpXG5gYGAifQ== -->
+
+```r
+# for Pure AR model
+mle.fit <- ar.mle(rec, order = 2)
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+# for Pure AR model
+mle.fit <- ar.mle(rec, order = 2)
+```"

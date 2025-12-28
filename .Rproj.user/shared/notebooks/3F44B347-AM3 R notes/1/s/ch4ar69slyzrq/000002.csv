@@ -1,0 +1,28 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBmaXR0aW5nIHRydW5jYXRlZCBkaXN0cmlidXRpb24gXG4jICMgd2hlbiB3ZSBrbm93IHRoZSB0cnVuY2F0aW9uIHZhbHVlc1xuZml0LnRleHAuZW1wMSA8LSBmaXRkaXN0KHksIFwidGV4cFwiLCBtZXRob2QgPSBcIm1sZVwiLFxuICBzdGFydCA9IGxpc3QocmF0ZSA9IDMpLCBmaXguYXJnID0gbGlzdChsb3cgPSAwLjUsXG4gIHVwcCA9IDMpKVxuIyAjIHdoZW4gd2UgZXN0aW1hdGUgdGhlIHRydW5jYXRpb24gdmFsdWVzXG5maXQudGV4cC5lbXAyIDwtIGZpdGRpc3QoeSwgXCJ0ZXhwXCIsIG1ldGhvZCA9IFwibWxlXCIsXG4gIHN0YXJ0ID0gbGlzdChyYXRlID0gMyksIGZpeC5hcmcgPSBsaXN0KGxvdyA9IG1pbih5KSxcbiAgdXBwID0gbWF4KHkpKSlcbmBgYCJ9 -->
+
+```r
+# fitting truncated distribution 
+# # when we know the truncation values
+fit.texp.emp1 <- fitdist(y, \"texp\", method = \"mle\",
+  start = list(rate = 3), fix.arg = list(low = 0.5,
+  upp = 3))
+# # when we estimate the truncation values
+fit.texp.emp2 <- fitdist(y, \"texp\", method = \"mle\",
+  start = list(rate = 3), fix.arg = list(low = min(y),
+  upp = max(y)))
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+# fitting truncated distribution 
+# # when we know the truncation values
+fit.texp.emp1 <- fitdist(y, \"texp\", method = \"mle\",
+  start = list(rate = 3), fix.arg = list(low = 0.5,
+  upp = 3))
+# # when we estimate the truncation values
+fit.texp.emp2 <- fitdist(y, \"texp\", method = \"mle\",
+  start = list(rate = 3), fix.arg = list(low = min(y),
+  upp = max(y)))
+```"

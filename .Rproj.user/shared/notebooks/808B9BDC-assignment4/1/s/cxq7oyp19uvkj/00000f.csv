@@ -1,0 +1,41 @@
+"0","# between full model with all interaction terms and backward stepwise model"
+"0","anova(claimsize.2.lognormal,claimsize.1.lognormal)"
+"1","Analysis of Variance Table
+"
+"1","
+"
+"1","Model 1: CLAIMS ~ GENDER + DRIVING_EXPERIENCE + EDUCATION + VEHICLE_OWNERSHIP + 
+    VEHICLE_YEAR + MARRIED + CHILDREN + ANNUAL_MILEAGE + VEHICLE_TYPE + 
+    SPEEDING_VIOLATIONS + GENDER:CHILDREN + GENDER:SPEEDING_VIOLATIONS + 
+    EDUCATION:ANNUAL_MILEAGE + VEHICLE_OWNERSHIP:VEHICLE_YEAR + 
+    VEHICLE_YEAR:MARRIED + CHILDREN:ANNUAL_MILEAGE + ANNUAL_MILEAGE:SPEEDING_VIOLATIONS
+Model 2: CLAIMS ~ (AGE + GENDER + DRIVING_EXPERIENCE + EDUCATION + CREDIT_SCORE + 
+    VEHICLE_OWNERSHIP + VEHICLE_YEAR + MARRIED + CHILDREN + ANNUAL_MILEAGE + 
+    VEHICLE_TYPE + SPEEDING_VIOLATIONS + PAST_ACCIDENTS)^2"
+"1","
+"
+"1"," "
+"1"," Res.Df"
+"1","    RSS"
+"1","  Df"
+"1"," Sum of Sq"
+"1","      F"
+"1"," Pr(>F)"
+"1","
+1"
+"1","   2512"
+"1"," 3465.6"
+"1","    "
+"1","          "
+"1","       "
+"1","       "
+"1","
+2"
+"1","   2379"
+"1"," 3338.8"
+"1"," 133"
+"1","    126.87"
+"1"," 0.6797"
+"1"," 0.9979"
+"1","
+"

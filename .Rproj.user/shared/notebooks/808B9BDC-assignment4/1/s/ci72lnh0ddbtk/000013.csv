@@ -1,0 +1,3 @@
+"0",""
+"0","# Q-Q Plot for Probit Model"
+"0","qqnorm(qres_probit, main = ""Q-Q Plot: Probit Model"")"

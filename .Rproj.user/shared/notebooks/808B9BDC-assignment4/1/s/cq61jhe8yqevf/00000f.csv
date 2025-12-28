@@ -1,0 +1,4 @@
+"0","# plot of type 1 standardised residuals"
+"0","hist(summary(claimsize.2.lognormal)$res/ summary(claimsize.2.lognormal)$sigma, breaks = 100,"
+"0","     main = ""histogram of standardised residuals"", xlab = ""standardised residuals"")"
+"0",""

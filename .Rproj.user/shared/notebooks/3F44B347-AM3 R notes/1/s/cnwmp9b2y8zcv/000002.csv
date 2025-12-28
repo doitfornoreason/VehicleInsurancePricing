@@ -1,0 +1,26 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBwcm9iYWJpbGl0eSBtYXNzIHZlY3RvcnNcbmZ5IDwtIGMoMCwgMC41LCAwLjQsIDAuMSlcbmZuIDwtIGMoMC4xLCAwLjMsIDAuNCwgMC4yKVxuRnMgPC0gYWdncmVnYXRlRGlzdChcImNvbnZvbHV0aW9uXCIsIG1vZGVsLmZyZXEgPSBmbiwgbW9kZWwuc2V2ID0gZnkpXG5cblxuZGlmZihGcylcblxuYGBgIn0= -->
+
+```r
+# probability mass vectors
+fy <- c(0, 0.5, 0.4, 0.1)
+fn <- c(0.1, 0.3, 0.4, 0.2)
+Fs <- aggregateDist(\"convolution\", model.freq = fn, model.sev = fy)
+
+
+diff(Fs)
+
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+# probability mass vectors
+fy <- c(0, 0.5, 0.4, 0.1)
+fn <- c(0.1, 0.3, 0.4, 0.2)
+Fs <- aggregateDist(\"convolution\", model.freq = fn, model.sev = fy)
+
+
+diff(Fs)
+
+```"

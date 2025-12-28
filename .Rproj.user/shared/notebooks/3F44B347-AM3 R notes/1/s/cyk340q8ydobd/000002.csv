@@ -1,0 +1,14 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudjEgPC0gc3RhdHM6OmZpbHRlcihvd250cywgZmlsdGVyID0gYygwLjUsMC42LDAuNSksIHNpZGVzID0gMilcbnBsb3QudHModjEpXG5gYGAifQ== -->
+
+```r
+v1 <- stats::filter(ownts, filter = c(0.5,0.6,0.5), sides = 2)
+plot.ts(v1)
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+v1 <- stats::filter(ownts, filter = c(0.5,0.6,0.5), sides = 2)
+plot.ts(v1)
+```"

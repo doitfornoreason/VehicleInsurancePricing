@@ -1,0 +1,16 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBhcmltYSBtb2RlbCBpbiBnZW5lcmFsXG5yZWMuYXJpbWEwIDwtIGFyaW1hKHJlYywgb3JkZXIgPSBjKDIsIDAsIDApKSAjIHRvIHVzZSB3aXRoIHRzZGlhZ1xuc3VtbWFyeShyZWMuYXJpbWEwKVxuYGBgIn0= -->
+
+```r
+# arima model in general
+rec.arima0 <- arima(rec, order = c(2, 0, 0)) # to use with tsdiag
+summary(rec.arima0)
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+# arima model in general
+rec.arima0 <- arima(rec, order = c(2, 0, 0)) # to use with tsdiag
+summary(rec.arima0)
+```"

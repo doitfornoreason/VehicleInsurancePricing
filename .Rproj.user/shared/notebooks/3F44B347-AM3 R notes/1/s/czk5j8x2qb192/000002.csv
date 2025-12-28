@@ -1,0 +1,248 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBsb3NzIHNpemUgaW5kZXggZnVuY3Rpb25cblxubHNwbG90IDwtIGZ1bmN0aW9uKGRhdGEpe1xuICAjIGNhbGN1bGF0aW5nIGxvc3Mgc2l6ZSBpbmRleCBmb3IgZWFjaCBuIGFuZCBwdXR0aW5nIGl0IGludG8gYSBkZlxuICBscyA8LSBjdW1zdW0oc29ydChkYXRhKSkvc3VtKGRhdGEpXG4gIHBsb3QoMTpsZW5ndGgoZGF0YSkvbGVuZ3RoKGRhdGEpLFxuICBscywgeGxhYiA9IFwibnVtYmVyIG9mIGNsYWltcyAoaW4gMTAwJSlcIixcbiAgeWxhYiA9IFwiZW1waXJpY2FsIGxvc3Mgc2l6ZSBpbmRleCBmdW5jdGlvblwiKVxuICBhYmxpbmUoaCA9IDAuMiwgdiA9IDAuOClcbn1cblxuXG4jIG1lYW4gZXhjZXNzIGZ1bmN0aW9uXG5tZWYgPC0gZnVuY3Rpb24oeCwgdSkge1xuICBtZWZ2ZWN0b3IgPC0gYygpXG4gIGZvciAoaSBpbiB1KSB7XG4gIG1lZnZlY3RvciA8LSBjKG1lZnZlY3Rvciwgc3VtKHBtYXgoc29ydCh4KS0gaSwgMCkpL2xlbmd0aCh4W3ggPmldKSlcbiAgfVxuICByZXR1cm4obWVmdmVjdG9yKVxufVxuXG4jIGNvZGluZyBSSUdIVCBjZW5zb3JlZCBkYXRhXG5jb2RlcmlnaHRjZW5zIDwtIGZ1bmN0aW9uKGV4aXQsIGRlYXRoKXtcbiAgY2Vuc2RhdGEgPC0gY2JpbmQuZGF0YS5mcmFtZShsZWZ0ID0gZXhpdCwgcmlnaHQgPSBleGl0KVxuICBjZW5zZGF0YSRyaWdodFtkZWF0aCA9PSAwXSA8LSBOQSAjIHJpZ2h0IGNlbnNvcmluZyB0aG9zZSB3aG8gZGlkbnQgZGllXG4gIHJldHVybihjZW5zZGF0YSlcbn1cblxuXG4jIG5lZ2F0aXZlIGxvZyBsaWtlbGlob29kXG5uZWdsb2dsaWsgPC0gZnVuY3Rpb24ocGRmLCBjZGYsIHBhcmFtLCB4LCBkZWR1Y3QsIGxpbWl0SSkge1xuICAjIEZ1bmN0aW9uIHJldHVybnMgdGhlIG5lZ2F0aXZlIGxvZyBsaWtlbGlob29kIG9mIHRoZSBjZW5zb3JlZCBhbmRcbiAgIyB0cnVuY2F0ZWQgZGF0YXNldC4gRWFjaCBkYXRhIHBvaW50J3MgY29udHJpYnV0aW9uIHRvIHRoZSBsb2dcbiAgIyBsaWtlbGlob29kIGRlcGVuZHMgb24gdGhlIHRoZW9yZXRpY2FsIGRpc3RyaWJ1dGlvbiBwZGYgYW5kIGNkZlxuICAjIGFuZCBhbHNvIHRoZSBkZWR1Y3RpYmxlIGFuZCBsaW1pdCB2YWx1ZXMgdG8gYWRqdXN0IGZvciB0cnVuY2F0aW9uXG4gICMgYW5kIGNlbnNvcmluZ1xuICBQTCA8LSBkby5jYWxsKGNkZiwgYyhsaXN0KHEgPSBkZWR1Y3QpLCBwYXJhbSkpICMgcHJvYi4gYmVsb3cgZGVkdWN0aWJsZVxuICBQWCA8LSBkby5jYWxsKGNkZiwgYyhsaXN0KHEgPSB4KSwgcGFyYW0pKSAjIHByb2IuIGFib3ZlIHhcbiAgZlggPC0gZG8uY2FsbChwZGYsIGMobGlzdCh4ID0geCksIHBhcmFtKSkgIyBkZW5zaXR5IGF0IHhcbiAgbGlrLmNvbnRyIDwtIGlmZWxzZShsaW1pdEksIGxvZygxIC0gUFgpLCBsb2coZlgpKSAtIGxvZygxIC0gUEwpXG4gIHJldHVybigtc3VtKGxpay5jb250cikpXG59XG5cbiMgUGxvdHRpbmcgdmFsdWVzLCBsb2dnZWQgdmFsdWVzIGFuZCBlbXBpcmljYWwgcmFua3NcbmVtcGlyaWNhbHJhbmtwbG90IDwtIGZ1bmN0aW9uKGRhdGEpe1xuICBwYXIobWZyb3cgPSBjKDEsIDMpLCBwdHkgPSBcInNcIilcbiAgcGxvdChkYXRhLCBwY2ggPSAyMCwgY2V4ID0gMC41LCBtYWluID0gXCJPcmlnaW5hbFwiKVxuICBwbG90KGxvZyhkYXRhKSwgcGNoID0gMjAsIGNleCA9IDAuNSwgbWFpbiA9IFwiTG9nIHZhbHVlc1wiKVxuICBwbG90KGNvcHVsYTo6cG9icyhkYXRhKVssIDFdLCBjb3B1bGE6OnBvYnMoZGF0YSlbLFxuICAyXSwgcGNoID0gMjAsIGNleCA9IDAuNSwgeGxhYiA9IHBhc3RlKFwicmFuayBvZlwiLCBuYW1lcyhkYXRhKVsxXSksXG4gIHlsYWIgPSBwYXN0ZShcInJhbmsgb2ZcIiwgbmFtZXMoZGF0YSlbMV0pLFxuICBtYWluID0gXCJFbXBpcmljYWwgcmFua3NcIilcbn1cblxuIyBwbG90dGluZyBjb3B1bGEgc2ltdWxhdGlvbnNcbmNvcHVsYXNpbSA8LSBmdW5jdGlvbihvYmope1xuICB4ID0gckNvcHVsYSg0MDAwLCBvYmopXG4gIHBhcihtZnJvdyA9IGMoMSwgMikpXG4gIHBsb3QoeCwgbWFpbiA9IFwic2ltdWxhdGlvbnNcIiwgeGxhYiA9IFwidVwiLCB5bGFiID0gXCJ2XCIsIHBjaCA9IFwiLlwiLFxuICBjb2wgPSBcImJsdWVcIilcbiAgY29udG91cihvYmosIHBDb3B1bGEsIG1haW4gPSBcIkNERlwiLCB4bGFiID0gXCJ1XCIsIHlsYWIgPSBcInZcIilcbn1cblxuXG4jIHBsb3R0aW5nIGZvcmVjYXN0cyB3aGVuIHVzaW5nIHRyYW5zZm9ybWVkIHZhbHVlc1xuZnJjc3QgPC0gZnVuY3Rpb24ocmF3X2RhdGEsXG4gICAgICAgICAgICAgICAgICByZXZlcnRpbmdmdW5jLFxuICAgICAgICAgICAgICAgICAgZml0X29iamVjdCwgXG4gICAgICAgICAgICAgICAgICBuLmFoZWFkLFxuICAgICAgICAgICAgICAgICAgY2ksIFxuICAgICAgICAgICAgICAgICAgeWxpbSA9IDAsXG4gICAgICAgICAgICAgICAgICBsYWJlbHMgPSAwKXtcbiAgIycgcmV2ZXJ0aW5nZnVuYyBpcyB0aGUgZnVuY3Rpb24gdGhhdCB0YWtlcyB0aGUgdHJhbnNmb3JtZWQgZGF0YSAodXNlZCB0byBmaXQpIGJhY2sgdG8gcmF3IGRhdGFcbiAgIycgbGFiZWxzID0gYyh0aXRsZSwgeGxhYiwgeWxhYilcblxuICAjIG1ha2luZyBmb3JlY2FzdHMgYW5kIHBsb3R0aW5nXG4gIGZpdC5wciA8LSBwcmVkaWN0KGZpdF9vYmplY3QsIG4uYWhlYWQgPSBuLmFoZWFkLCBjaSA9IGNpKVxuICBmaXQucHJlZCA8LSB0cyhjKHJhd19kYXRhLCByZXZlcnRpbmdmdW5jKGZpdC5wciRwcmVkKSksIHN0YXJ0ID0gc3RhcnQocmF3X2RhdGEpLFxuICBmcmVxdWVuY3kgPSBmcmVxdWVuY3kocmF3X2RhdGEpKVxuICAjIFBsb3RcbiAgaWYgKHlsaW0gPT0gMCl7XG4gICAgaWYgKGxhYmVscyA9PSAwKXtcbiAgICAgIHRzLnBsb3QoZml0LnByZWQpXG4gICAgfVxuICAgIGVsc2V7XG4gICAgICB0cy5wbG90KGZpdC5wcmVkLCBcbiAgICAgICAgICAgICAgbWFpbiA9IGxhYmVsc1sxXSxcbiAgICAgICAgICAgICAgeGxhYiA9IGxhYmVsc1syXSxcbiAgICAgICAgICAgICAgeWxhYiA9IGxhYmVsc1szXSlcbiAgICB9XG4gIH1cbiAgZWxzZXtcbiAgICBpZiAobGFiZWxzID09IDApe1xuICAgICAgdHMucGxvdChmaXQucHJlZCwgeWxpbSA9IHlsaW0pXG4gICAgfVxuICAgIGVsc2V7XG4gICAgICB0cy5wbG90KGZpdC5wcmVkLCB5bGltID0geWxpbSwgXG4gICAgICAgICAgICAgIG1haW4gPSBsYWJlbHNbMV0sXG4gICAgICAgICAgICAgIHhsYWIgPSBsYWJlbHNbMl0sXG4gICAgICAgICAgICAgIHlsYWIgPSBsYWJlbHNbM10pXG4gICAgfVxuICB9XG5cbiAgVSA9IHJldmVydGluZ2Z1bmMoZml0LnByJHByZWQgKyBmaXQucHIkc2UpXG4gIEwgPSByZXZlcnRpbmdmdW5jKGZpdC5wciRwcmVkLSBmaXQucHIkc2UpXG4gIHh4ID0gYyh0aW1lKFUpLCByZXYodGltZShVKSkpXG4gIHl5ID0gYyhMLCByZXYoVSkpXG4gIHBvbHlnb24oeHgsIHl5LCBib3JkZXIgPSA4LCBjb2wgPSBncmF5KDAuNiwgYWxwaGEgPSAwLjIpKVxuICBsaW5lcyhyZXZlcnRpbmdmdW5jKGZpdC5wciRwcmVkKSwgY29sID0gXCJyZWRcIiwgbHdkID0gMSwgdHlwZSA9IFwicFwiKVxuICBcbiAgbGVnZW5kKFwidG9wbGVmdFwiLCAjIFBvc2l0aW9uIG9mIHRoZSBsZWdlbmQgKGUuZy4sIFwidG9wcmlnaHRcIiwgXCJib3R0b21sZWZ0XCIsIFwiY2VudGVyXCIsIG9yXG4gICAgICAgbGVnZW5kID0gYyhcIlByZWRpY3Rpb25zXCIsIFwiOTUlIENJXCIpLCAjIFRleHQgbGFiZWxzIGZvciB0aGUgbGVnZW5kIGl0ZW1zXG4gICAgICAgY29sID0gYyhcInJlZFwiLCBcImdyZXlcIiksICMgQ29sb3JzIGNvcnJlc3BvbmRpbmcgdG8gdGhlIGl0ZW1zXG4gICAgICAgcGNoID0gYygxNiwgTkEpLCAjIFBvaW50IHN5bWJvbHMgZm9yIHByZWRpY3Rpb25zICgxNiBmb3IgZmlsbGVkIGNpcmNsZSksIE5BIGZvciBsaW5lc1xuICAgICAgIGx0eSA9IGMoTkEsIDEpLCAjIExpbmUgdHlwZXMgZm9yIGxpbmVzIChOQSBmb3IgcG9pbnRzKSwgMiBmb3IgZGFzaGVkIGxpbmVcbiAgICAgICBsd2QgPSBjKE5BLCAxKSwgIyBMaW5lIHdpZHRoIGZvciBsaW5lcyAoTkEgZm9yIHBvaW50cyksIDIgZm9yIHRoaWNrZXIgbGluZVxuICAgICAgIGJ0eSA9IFwiblwiICMgXCJuXCIgZm9yIG5vIGJveCBhcm91bmQgdGhlIGxlZ2VuZCwgXCJvXCIgZm9yIGEgYm94XG4pXG59XG5gYGAifQ== -->
+
+```r
+# loss size index function
+
+lsplot <- function(data){
+  # calculating loss size index for each n and putting it into a df
+  ls <- cumsum(sort(data))/sum(data)
+  plot(1:length(data)/length(data),
+  ls, xlab = \"number of claims (in 100%)\",
+  ylab = \"empirical loss size index function\")
+  abline(h = 0.2, v = 0.8)
+}
+
+
+# mean excess function
+mef <- function(x, u) {
+  mefvector <- c()
+  for (i in u) {
+  mefvector <- c(mefvector, sum(pmax(sort(x)- i, 0))/length(x[x >i]))
+  }
+  return(mefvector)
+}
+
+# coding RIGHT censored data
+coderightcens <- function(exit, death){
+  censdata <- cbind.data.frame(left = exit, right = exit)
+  censdata$right[death == 0] <- NA # right censoring those who didnt die
+  return(censdata)
+}
+
+
+# negative log likelihood
+negloglik <- function(pdf, cdf, param, x, deduct, limitI) {
+  # Function returns the negative log likelihood of the censored and
+  # truncated dataset. Each data point's contribution to the log
+  # likelihood depends on the theoretical distribution pdf and cdf
+  # and also the deductible and limit values to adjust for truncation
+  # and censoring
+  PL <- do.call(cdf, c(list(q = deduct), param)) # prob. below deductible
+  PX <- do.call(cdf, c(list(q = x), param)) # prob. above x
+  fX <- do.call(pdf, c(list(x = x), param)) # density at x
+  lik.contr <- ifelse(limitI, log(1 - PX), log(fX)) - log(1 - PL)
+  return(-sum(lik.contr))
+}
+
+# Plotting values, logged values and empirical ranks
+empiricalrankplot <- function(data){
+  par(mfrow = c(1, 3), pty = \"s\")
+  plot(data, pch = 20, cex = 0.5, main = \"Original\")
+  plot(log(data), pch = 20, cex = 0.5, main = \"Log values\")
+  plot(copula::pobs(data)[, 1], copula::pobs(data)[,
+  2], pch = 20, cex = 0.5, xlab = paste(\"rank of\", names(data)[1]),
+  ylab = paste(\"rank of\", names(data)[1]),
+  main = \"Empirical ranks\")
+}
+
+# plotting copula simulations
+copulasim <- function(obj){
+  x = rCopula(4000, obj)
+  par(mfrow = c(1, 2))
+  plot(x, main = \"simulations\", xlab = \"u\", ylab = \"v\", pch = \".\",
+  col = \"blue\")
+  contour(obj, pCopula, main = \"CDF\", xlab = \"u\", ylab = \"v\")
+}
+
+
+# plotting forecasts when using transformed values
+frcst <- function(raw_data,
+                  revertingfunc,
+                  fit_object, 
+                  n.ahead,
+                  ci, 
+                  ylim = 0,
+                  labels = 0){
+  #' revertingfunc is the function that takes the transformed data (used to fit) back to raw data
+  #' labels = c(title, xlab, ylab)
+
+  # making forecasts and plotting
+  fit.pr <- predict(fit_object, n.ahead = n.ahead, ci = ci)
+  fit.pred <- ts(c(raw_data, revertingfunc(fit.pr$pred)), start = start(raw_data),
+  frequency = frequency(raw_data))
+  # Plot
+  if (ylim == 0){
+    if (labels == 0){
+      ts.plot(fit.pred)
+    }
+    else{
+      ts.plot(fit.pred, 
+              main = labels[1],
+              xlab = labels[2],
+              ylab = labels[3])
+    }
+  }
+  else{
+    if (labels == 0){
+      ts.plot(fit.pred, ylim = ylim)
+    }
+    else{
+      ts.plot(fit.pred, ylim = ylim, 
+              main = labels[1],
+              xlab = labels[2],
+              ylab = labels[3])
+    }
+  }
+
+  U = revertingfunc(fit.pr$pred + fit.pr$se)
+  L = revertingfunc(fit.pr$pred- fit.pr$se)
+  xx = c(time(U), rev(time(U)))
+  yy = c(L, rev(U))
+  polygon(xx, yy, border = 8, col = gray(0.6, alpha = 0.2))
+  lines(revertingfunc(fit.pr$pred), col = \"red\", lwd = 1, type = \"p\")
+  
+  legend(\"topleft\", # Position of the legend (e.g., \"topright\", \"bottomleft\", \"center\", or
+       legend = c(\"Predictions\", \"95% CI\"), # Text labels for the legend items
+       col = c(\"red\", \"grey\"), # Colors corresponding to the items
+       pch = c(16, NA), # Point symbols for predictions (16 for filled circle), NA for lines
+       lty = c(NA, 1), # Line types for lines (NA for points), 2 for dashed line
+       lwd = c(NA, 1), # Line width for lines (NA for points), 2 for thicker line
+       bty = \"n\" # \"n\" for no box around the legend, \"o\" for a box
+)
+}
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+# loss size index function
+
+lsplot <- function(data){
+  # calculating loss size index for each n and putting it into a df
+  ls <- cumsum(sort(data))/sum(data)
+  plot(1:length(data)/length(data),
+  ls, xlab = \"number of claims (in 100%)\",
+  ylab = \"empirical loss size index function\")
+  abline(h = 0.2, v = 0.8)
+}
+
+
+# mean excess function
+mef <- function(x, u) {
+  mefvector <- c()
+  for (i in u) {
+  mefvector <- c(mefvector, sum(pmax(sort(x)- i, 0))/length(x[x >i]))
+  }
+  return(mefvector)
+}
+
+# coding RIGHT censored data
+coderightcens <- function(exit, death){
+  censdata <- cbind.data.frame(left = exit, right = exit)
+  censdata$right[death == 0] <- NA # right censoring those who didnt die
+  return(censdata)
+}
+
+
+# negative log likelihood
+negloglik <- function(pdf, cdf, param, x, deduct, limitI) {
+  # Function returns the negative log likelihood of the censored and
+  # truncated dataset. Each data point's contribution to the log
+  # likelihood depends on the theoretical distribution pdf and cdf
+  # and also the deductible and limit values to adjust for truncation
+  # and censoring
+  PL <- do.call(cdf, c(list(q = deduct), param)) # prob. below deductible
+  PX <- do.call(cdf, c(list(q = x), param)) # prob. above x
+  fX <- do.call(pdf, c(list(x = x), param)) # density at x
+  lik.contr <- ifelse(limitI, log(1 - PX), log(fX)) - log(1 - PL)
+  return(-sum(lik.contr))
+}
+
+# Plotting values, logged values and empirical ranks
+empiricalrankplot <- function(data){
+  par(mfrow = c(1, 3), pty = \"s\")
+  plot(data, pch = 20, cex = 0.5, main = \"Original\")
+  plot(log(data), pch = 20, cex = 0.5, main = \"Log values\")
+  plot(copula::pobs(data)[, 1], copula::pobs(data)[,
+  2], pch = 20, cex = 0.5, xlab = paste(\"rank of\", names(data)[1]),
+  ylab = paste(\"rank of\", names(data)[1]),
+  main = \"Empirical ranks\")
+}
+
+# plotting copula simulations
+copulasim <- function(obj){
+  x = rCopula(4000, obj)
+  par(mfrow = c(1, 2))
+  plot(x, main = \"simulations\", xlab = \"u\", ylab = \"v\", pch = \".\",
+  col = \"blue\")
+  contour(obj, pCopula, main = \"CDF\", xlab = \"u\", ylab = \"v\")
+}
+
+
+# plotting forecasts when using transformed values
+frcst <- function(raw_data,
+                  revertingfunc,
+                  fit_object, 
+                  n.ahead,
+                  ci, 
+                  ylim = 0,
+                  labels = 0){
+  #' revertingfunc is the function that takes the transformed data (used to fit) back to raw data
+  #' labels = c(title, xlab, ylab)
+
+  # making forecasts and plotting
+  fit.pr <- predict(fit_object, n.ahead = n.ahead, ci = ci)
+  fit.pred <- ts(c(raw_data, revertingfunc(fit.pr$pred)), start = start(raw_data),
+  frequency = frequency(raw_data))
+  # Plot
+  if (ylim == 0){
+    if (labels == 0){
+      ts.plot(fit.pred)
+    }
+    else{
+      ts.plot(fit.pred, 
+              main = labels[1],
+              xlab = labels[2],
+              ylab = labels[3])
+    }
+  }
+  else{
+    if (labels == 0){
+      ts.plot(fit.pred, ylim = ylim)
+    }
+    else{
+      ts.plot(fit.pred, ylim = ylim, 
+              main = labels[1],
+              xlab = labels[2],
+              ylab = labels[3])
+    }
+  }
+
+  U = revertingfunc(fit.pr$pred + fit.pr$se)
+  L = revertingfunc(fit.pr$pred- fit.pr$se)
+  xx = c(time(U), rev(time(U)))
+  yy = c(L, rev(U))
+  polygon(xx, yy, border = 8, col = gray(0.6, alpha = 0.2))
+  lines(revertingfunc(fit.pr$pred), col = \"red\", lwd = 1, type = \"p\")
+  
+  legend(\"topleft\", # Position of the legend (e.g., \"topright\", \"bottomleft\", \"center\", or
+       legend = c(\"Predictions\", \"95% CI\"), # Text labels for the legend items
+       col = c(\"red\", \"grey\"), # Colors corresponding to the items
+       pch = c(16, NA), # Point symbols for predictions (16 for filled circle), NA for lines
+       lty = c(NA, 1), # Line types for lines (NA for points), 2 for dashed line
+       lwd = c(NA, 1), # Line width for lines (NA for points), 2 for thicker line
+       bty = \"n\" # \"n\" for no box around the legend, \"o\" for a box
+)
+}
+```"

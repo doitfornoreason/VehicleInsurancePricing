@@ -1,0 +1,12 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdGRpc3QobG9nKFNVVkEkbWVkY29zdHMpLCBkZW1wID0gVFJVRSlcbmBgYCJ9 -->
+
+```r
+plotdist(log(SUVA$medcosts), demp = TRUE)
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+plotdist(log(SUVA$medcosts), demp = TRUE)
+```"

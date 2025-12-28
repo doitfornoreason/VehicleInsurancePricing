@@ -1,0 +1,28 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZnkgPC0gYygwLCAwLjUsIDAuNCwgMC4xKVxuIyBzdXBwb3NlIE4gaXMgcG9pcygwLjUpXG5GcyA8LSBhZ2dyZWdhdGVEaXN0KG1ldGhvZCA9IFwicmVjdXJzaXZlXCIsXG4gICAgICAgICAgICAgICAgICAgIG1vZGVsLmZyZXEgPSBcInBvaXNzb25cIiwgbGFtYmRhID0gMC44LFxuICAgICAgICAgICAgICAgICAgICBtb2RlbC5zZXYgPSBmeSlcblxuRnMoMToxMCkgIyBnZXR0aW5nIGNkZlxuXG5kaWZmKEZzKVsxOjEwXSAjIGdldHRpbmcgcG1mXG5gYGAifQ== -->
+
+```r
+fy <- c(0, 0.5, 0.4, 0.1)
+# suppose N is pois(0.5)
+Fs <- aggregateDist(method = \"recursive\",
+                    model.freq = \"poisson\", lambda = 0.8,
+                    model.sev = fy)
+
+Fs(1:10) # getting cdf
+
+diff(Fs)[1:10] # getting pmf
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+fy <- c(0, 0.5, 0.4, 0.1)
+# suppose N is pois(0.5)
+Fs <- aggregateDist(method = \"recursive\",
+                    model.freq = \"poisson\", lambda = 0.8,
+                    model.sev = fy)
+
+Fs(1:10) # getting cdf
+
+diff(Fs)[1:10] # getting pmf
+```"

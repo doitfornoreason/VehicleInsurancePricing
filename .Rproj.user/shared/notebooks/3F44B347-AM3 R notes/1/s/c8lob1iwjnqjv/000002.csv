@@ -1,0 +1,46 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBhciBjb2VmZmljaWVudFxucGhpID0gYyhyZXAoMCwgMTEpLCAwLjkpXG5cbiMgc2ltdWxhdGUgYXMgcmVndWxhciBhcmltYVxuc0FSID0gYXJpbWEuc2ltKGxpc3Qob3JkZXIgPSBjKDEyLDAsIDApLCBhciA9IHBoaSksIG4gPSAzNylcblxuXG4jIGNoYW5nZSBmcmVxdWVuY3lcbnNBUiA9IHRzKHNBUiwgZnJlcSA9IDEyKVxucGFyKG1hciA9IGMoMywgMywgMiwgMSksIG1ncCA9IGMoMS42LCAwLjYsIDApKVxucGxvdChzQVIsIGF4ZXMgPSBGQUxTRSwgbWFpbiA9IFwiU2Vhc29uYWwgQVIoMSlcIiwgeGxhYiA9IFwieWVhclwiLFxudHlwZSA9IFwiY1wiKVxuTW9udGhzIDwtIGMoXCJKXCIsIFwiRlwiLCBcIk1cIiwgXCJBXCIsIFwiTVwiLCBcIkpcIiwgXCJKXCIsIFwiQVwiLCBcIlNcIiwgXCJPXCIsIFwiTlwiLFwiRFwiKVxucG9pbnRzKHNBUiwgcGNoID0gTW9udGhzLCBjZXggPSAxLjI1LCBmb250ID0gNCwgY29sID0gMTo0KVxuYXhpcygxLCAxOjQpXG5hYmxpbmUodiA9IDE6NCwgbHR5ID0gMiwgY29sID0gZ3JheSgwLjcpKVxuYXhpcygyKVxuYm94KClcbmBgYCJ9 -->
+
+```r
+# ar coefficient
+phi = c(rep(0, 11), 0.9)
+
+# simulate as regular arima
+sAR = arima.sim(list(order = c(12,0, 0), ar = phi), n = 37)
+
+
+# change frequency
+sAR = ts(sAR, freq = 12)
+par(mar = c(3, 3, 2, 1), mgp = c(1.6, 0.6, 0))
+plot(sAR, axes = FALSE, main = \"Seasonal AR(1)\", xlab = \"year\",
+type = \"c\")
+Months <- c(\"J\", \"F\", \"M\", \"A\", \"M\", \"J\", \"J\", \"A\", \"S\", \"O\", \"N\",\"D\")
+points(sAR, pch = Months, cex = 1.25, font = 4, col = 1:4)
+axis(1, 1:4)
+abline(v = 1:4, lty = 2, col = gray(0.7))
+axis(2)
+box()
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+# ar coefficient
+phi = c(rep(0, 11), 0.9)
+
+# simulate as regular arima
+sAR = arima.sim(list(order = c(12,0, 0), ar = phi), n = 37)
+
+
+# change frequency
+sAR = ts(sAR, freq = 12)
+par(mar = c(3, 3, 2, 1), mgp = c(1.6, 0.6, 0))
+plot(sAR, axes = FALSE, main = \"Seasonal AR(1)\", xlab = \"year\",
+type = \"c\")
+Months <- c(\"J\", \"F\", \"M\", \"A\", \"M\", \"J\", \"J\", \"A\", \"S\", \"O\", \"N\",\"D\")
+points(sAR, pch = Months, cex = 1.25, font = 4, col = 1:4)
+axis(1, 1:4)
+abline(v = 1:4, lty = 2, col = gray(0.7))
+axis(2)
+box()
+```"

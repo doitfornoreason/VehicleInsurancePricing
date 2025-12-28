@@ -1,0 +1,12 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXZpcjo6aGlsbChTVVZBJG1lZGNvc3RzKVxuYGBgIn0= -->
+
+```r
+evir::hill(SUVA$medcosts)
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+evir::hill(SUVA$medcosts)
+```"

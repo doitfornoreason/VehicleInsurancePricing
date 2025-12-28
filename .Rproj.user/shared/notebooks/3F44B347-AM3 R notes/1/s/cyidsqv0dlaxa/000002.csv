@@ -1,0 +1,5 @@
+"1","```r
+ownts <- rnorm(30, 0.5,0.5)
+ownts <- ts(ownts, frequency = 12, start = 2025)
+time(ownts)
+```"

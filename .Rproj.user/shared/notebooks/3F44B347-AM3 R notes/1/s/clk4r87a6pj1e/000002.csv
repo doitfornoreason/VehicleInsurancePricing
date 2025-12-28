@@ -1,0 +1,24 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChzb2ksIG1haW4gPSBcImxvd2VzcyBvZiB0aGUgU09JIHNlcmllcy5cIilcblxuI3Ntb290aGVyXG5saW5lcyhsb3dlc3Moc29pLCBmID0gMC4wNSksIGx3ZCA9IDMsIGNvbCA9IFwiYmx1ZVwiKVxuP2xvd2Vzc1xuI3RyZW5kIFxubGluZXMobG93ZXNzKHNvaSksIGx0eSA9IDIsIGx3ZCA9IDMsIGNvbCA9IFwicmVkXCIpXG5gYGAifQ== -->
+
+```r
+plot(soi, main = \"lowess of the SOI series.\")
+
+#smoother
+lines(lowess(soi, f = 0.05), lwd = 3, col = \"blue\")
+?lowess
+#trend 
+lines(lowess(soi), lty = 2, lwd = 3, col = \"red\")
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+plot(soi, main = \"lowess of the SOI series.\")
+
+#smoother
+lines(lowess(soi, f = 0.05), lwd = 3, col = \"blue\")
+?lowess
+#trend 
+lines(lowess(soi), lty = 2, lwd = 3, col = \"red\")
+```"

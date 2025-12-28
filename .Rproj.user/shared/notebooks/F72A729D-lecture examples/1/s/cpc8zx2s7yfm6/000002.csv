@@ -1,0 +1,23 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcIndvb2xkcmlkZ2VcIilcblxuYGBgIn0= -->
+
+```r
+install.packages(\"wooldridge\")
+
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+install.packages(\"wooldridge\")
+
+```"
+"1","trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/contrib/4.4/wooldridge_1.4-4.tgz'
+Content type 'application/x-gzip' length 4220150 bytes (4.0 MB)
+==================================================
+downloaded 4.0 MB
+"
+"1","
+The downloaded binary packages are in
+	/var/folders/hv/zv65r5j52zgd1nc0cykq3pv00000gn/T//Rtmp1l1K07/downloaded_packages
+"

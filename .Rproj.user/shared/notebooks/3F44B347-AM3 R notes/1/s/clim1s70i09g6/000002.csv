@@ -1,0 +1,20 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB0YXUgdG8gcGFyYW1ldGVyc1xuQmlDb3BUYXUyUGFyKDMsIDAuMzUpXG5cbiMgcGFyYW1ldGVycyB0byBvdGhlciBtZWFzdXJlc1xuc3VtbWFyeShCaUNvcCgzLCAxKSlcbmBgYCJ9 -->
+
+```r
+# tau to parameters
+BiCopTau2Par(3, 0.35)
+
+# parameters to other measures
+summary(BiCop(3, 1))
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+# tau to parameters
+BiCopTau2Par(3, 0.35)
+
+# parameters to other measures
+summary(BiCop(3, 1))
+```"

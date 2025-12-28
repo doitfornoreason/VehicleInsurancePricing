@@ -1,0 +1,6 @@
+"0","for (i in 1:length(data)){"
+"0","  covariate <- data[[i]]"
+"0","  if (is.numeric(covariate)){"
+"0","    hist(covariate, main = paste(""Histogram of"", names(data)[i] ), xlab = deparse(substitute(covariate)), breaks = 100)"
+"0","  }"
+"0","}"

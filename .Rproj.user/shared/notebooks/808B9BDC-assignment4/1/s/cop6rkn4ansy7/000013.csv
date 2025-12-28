@@ -1,0 +1,12 @@
+"0","cat(""Saving required objects to 'app_dependencies.RData'...\n"")"
+"1","Saving required objects to 'app_dependencies.RData'...
+"
+"0","save(data,"
+"0","     outcome.3.logistic,"
+"0","     claimsize.3.gamma,"
+"0","     data,"
+"0","     file = ""app_dependencies.RData"")"
+"0",""
+"0","cat(""Objects saved successfully.\n"")"
+"1","Objects saved successfully.
+"

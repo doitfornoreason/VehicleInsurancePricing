@@ -1,0 +1,40 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChzb2ksIG1haW4gPSBcIktlcm5lbCBzbW9vdGhlciBvZiBTT0kuXG5UaGUgaW5zZXJ0IHNob3dzIHRoZSBzaGFwZSBvZiB0aGUgbm9ybWFsIGtlcm5lbCBbbm90IGRyYXduIHRvIHNjYWxlXVwiKVxubGluZXMoa3Ntb290aCh0aW1lKHNvaSksIHNvaSwgXCJub3JtYWxcIiwgYmFuZHdpZHRoID0gMSksIGx3ZCA9IDMsXG5jb2wgPSBcImJsdWVcIilcblxuXG5cbiMga2VybmVsIHBsb3RcbmdhdXNzIDwtIGZ1bmN0aW9uKHgpIHtcbjEvc3FydCgyICogcGkpICogZXhwKC0oeF4yKS8yKVxufVxueCA8LSBzZXEoZnJvbSA9LTMsIHRvID0gMywgYnkgPSAwLjAwMSlcblxucGxvdCh4LCBnYXVzcyh4KSwgdHlwZSA9IFwibFwiLCB5bGltID0gYygtMC4wMiwgMC40NSksIHhheHQgPSBcIm5cIixcbnlheHQgPSBcIm5cIiwgYW5uID0gRkFMU0UpXG5gYGAifQ== -->
+
+```r
+plot(soi, main = \"Kernel smoother of SOI.
+The insert shows the shape of the normal kernel [not drawn to scale]\")
+lines(ksmooth(time(soi), soi, \"normal\", bandwidth = 1), lwd = 3,
+col = \"blue\")
+
+
+
+# kernel plot
+gauss <- function(x) {
+1/sqrt(2 * pi) * exp(-(x^2)/2)
+}
+x <- seq(from =-3, to = 3, by = 0.001)
+
+plot(x, gauss(x), type = \"l\", ylim = c(-0.02, 0.45), xaxt = \"n\",
+yaxt = \"n\", ann = FALSE)
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+plot(soi, main = \"Kernel smoother of SOI.
+The insert shows the shape of the normal kernel [not drawn to scale]\")
+lines(ksmooth(time(soi), soi, \"normal\", bandwidth = 1), lwd = 3,
+col = \"blue\")
+
+
+
+# kernel plot
+gauss <- function(x) {
+1/sqrt(2 * pi) * exp(-(x^2)/2)
+}
+x <- seq(from =-3, to = 3, by = 0.001)
+
+plot(x, gauss(x), type = \"l\", ylim = c(-0.02, 0.45), xaxt = \"n\",
+yaxt = \"n\", ann = FALSE)
+```"

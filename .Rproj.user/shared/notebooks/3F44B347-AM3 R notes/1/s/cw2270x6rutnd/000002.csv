@@ -1,0 +1,29 @@
+"1","```r
+# Probability mass vectors
+X <- c(1/4, 1/2, 1/4, 0, 0)
+Y <- c(1/2, 0, 1/2, 0, 0)
+Z <- c(1/4, 0, 1/2, 0, 1/4)
+
+# X + Y
+S1 <- sapply(1:5,
+             function(i){
+               sum(X[1:i] * Y[i:1])
+             })
+
+S1
+
+# S2 = X + Y + Z = S1 + Z
+# needs to have a length of 9 since S2 = 0,1,..,8
+Z <- c(Z, rep(0,4))
+S1 <- c(S1, rep(0,4))
+
+S1
+
+
+S2 <- sapply(1:9,
+             function(i){
+               sum(S1[1:i] * Z[i:1])
+             })
+
+S2
+```"

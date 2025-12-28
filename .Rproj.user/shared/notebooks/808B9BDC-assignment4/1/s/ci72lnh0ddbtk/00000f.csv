@@ -1,0 +1,8 @@
+"0","qres_logistic <- qresiduals(outcome.2.logistic)"
+"0","qres_probit <- qresiduals(outcome.2.probit)"
+"0",""
+"0","# Set up a 1x2 plotting area to see them side-by-side"
+"0","par(mfrow = c(1, 2), pty = ""s"") # pty=""s"" makes the plots square"
+"0",""
+"0","# Q-Q Plot for Logistic Model"
+"0","qqnorm(qres_logistic, main = ""Q-Q Plot: Logistic Model"")"

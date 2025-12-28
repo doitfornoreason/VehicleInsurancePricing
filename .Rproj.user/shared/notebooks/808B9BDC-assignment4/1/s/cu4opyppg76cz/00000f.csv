@@ -1,0 +1,11 @@
+"0",""
+"0",""
+"0","cat(""\n\n--- Generating Diagnostic Plots for Final Model ---\n"")"
+"1","
+
+--- Generating Diagnostic Plots for Final Model ---
+"
+"0","claimsize.2.gamma <- gamma_step"
+"0",""
+"0","par(mfrow = c(2, 2))"
+"0","plot(claimsize.2.gamma)"

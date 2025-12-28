@@ -1,0 +1,24 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBtYWtpbmcgZGF0YSB2ZWN0b3JcbnggPSBjYmluZChjbW9ydCwgdGVtcHIsIHBhcnQpXG5cbiMgZml0dGluZ1xuZml0IDwtIFZBUih4ICwgcCA9IDEsIHR5cGUgPSBcImJvdGhcIikgIyBib3RoIGZpdHMgY29uc3RhbnQgKyB0cmVuZFxuc3VtbWFyeShmaXQpXG5cbmBgYCJ9 -->
+
+```r
+# making data vector
+x = cbind(cmort, tempr, part)
+
+# fitting
+fit <- VAR(x , p = 1, type = \"both\") # both fits constant + trend
+summary(fit)
+
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+# making data vector
+x = cbind(cmort, tempr, part)
+
+# fitting
+fit <- VAR(x , p = 1, type = \"both\") # both fits constant + trend
+summary(fit)
+
+```"

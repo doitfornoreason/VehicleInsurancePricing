@@ -1,0 +1,11 @@
+"1","```r
+
+# untransformed data 
+sarima.for(jj, 48,1,1,0,0,1,1,4)
+
+#transformed data
+fit <- sarima(log(jj), 1,1,0,0,1,1,4, details = FALSE)
+frcst(raw_data = jj,
+      revertingfunc = exp,
+      fit_object = fit$fit,48)
+```"

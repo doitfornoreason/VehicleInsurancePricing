@@ -1,0 +1,2 @@
+"0","claimsize_df <- train_data_imputed[train_data_imputed$OUTCOME >0,] %>%"
+"0","  select(-OUTCOME)"

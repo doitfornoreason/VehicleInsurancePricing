@@ -1,0 +1,213 @@
+---
+title: "draft"
+output: html_notebook
+---
+```{r, echo = F, message = F, warning = F}
+
+library(copula)
+library(VineCopula)
+library(Ryacas)
+library(tinytex)
+library(dynlm)
+library(corrplot)
+
+
+library(readxl)
+library(actuar)
+library(fitdistrplus)
+library(evir)
+library(extRemes)
+library(tidyverse)
+library(astsa)
+library(xts)
+library(forecast)
+library(vars)
+
+library(tidyverse)
+library(wooldridge)
+library(whitestrap)
+library(car)
+library(olsrr)
+source("Customfunctions.R")
+library(missForest)
+```
+
+# Exploratory analysis
+```{r}
+data <- read_csv("Car_Claims.csv")
+summary(data)
+# converting character covariates into factors
+for (i in 1:length(data)){
+  if (is.character(data[[i]])){
+    data[[i]] <- as.factor(data[[i]])
+  }
+}
+```
+
+## splitting data into train and test/validation 
+```{r}
+set.seed(67)
+train_indices <- sample(1:10000,8000)
+train_data <- data[train_indices, ]
+test_data <- data[-train_indices, ]
+
+
+train_data_x <- train_data %>% dplyr::select(-OUTCOME, -CLAIMS)
+test_data_X <- test_data %>% dplyr::select(-OUTCOME, -CLAIMS)
+```
+
+## correlation matrix of numeric covariates
+```{r}
+num_cols <-  data %>% select(where(is.numeric))
+
+num_cols <-  num_cols[!is.na(num_cols$CREDIT_SCORE) & 
+                      !is.na(num_cols$ANNUAL_MILEAGE),]
+num_cols <-  num_cols %>% select(-ID)
+corrplot(cor(num_cols), type = "lower", diag = F)
+```
+- Annual mileage is lower for married ppl and ppl with children
+- past accidents has high corr with speeding violations ofc
+- vehicle owners are less likely to file claims?
+
+
+## investigating missing values
+```{r}
+print(paste("number of rows with missing annual mileage", 
+            sum(is.na(train_data$ANNUAL_MILEAGE)), "/8000"))
+print(paste("number of rows with missing creditscore", 
+            sum(is.na(train_data$CREDIT_SCORE)), "/8000"))
+print(paste("number of rows missing both annual mileage and credit", 
+            sum(is.na(train_data$ANNUAL_MILEAGE) & is.na(train_data$CREDIT_SCORE)), "/8000"))
+
+print(paste("percentage of ppl of claim for nonempty annual mileage rows", 
+            mean(train_data[!is.na(train_data$ANNUAL_MILEAGE),"OUTCOME", drop = T])))
+print(paste("percentage of ppl of claim for empty annual mileage rows", 
+            mean(train_data[is.na(train_data$ANNUAL_MILEAGE),"OUTCOME", drop = T])))
+
+print(paste("percentage of ppl of claim for nonempty creditscore rows", 
+            mean(train_data[!is.na(train_data$CREDIT_SCORE),"OUTCOME", drop = T])))
+print(paste("percentage of ppl of claim for empty creditscore rows", 
+            mean(train_data[is.na(train_data$CREDIT_SCORE),"OUTCOME", drop = T])))
+
+
+boxplot(log(train_data[train_data$CLAIMS>0,"CLAIMS", drop = T]) ~ is.na(train_data[train_data$CLAIMS>0,"ANNUAL_MILEAGE", drop = T]),
+        xlab = "is annual mileage missing?", ylab = "log(claim size)")
+
+boxplot(log(train_data[train_data$CLAIMS>0,"CLAIMS", drop = T]) ~ is.na(train_data[train_data$CLAIMS>0,"CREDIT_SCORE", drop = T]),
+        xlab = "is creditscore missing?", ylab = "log(claim size)")
+
+```
+
+## imputing missing values
+
+```{r}
+# --- 1. Separate Numeric and Non-Numeric Data ---
+# Select only the columns that are numeric
+numeric_cols <- train_data_x %>%
+  dplyr::select(where(is.numeric))
+
+# Keep the non-numeric columns to join back later
+non_numeric_cols <- train_data_x %>%
+  dplyr::select(where(Negate(is.numeric)))
+
+
+# --- 2. Perform PCA Imputation on Numeric Data ---
+# Use the imputePCA function from the missMDA package.
+# It's a good practice to start with 2 or 3 principal components (ncp).
+imputation_results <- missMDA::imputePCA(numeric_cols, ncp = 2)
+
+# Extract the completed numeric dataframe
+numeric_cols_imputed <- imputation_results$completeObs
+
+
+# --- 3. Recombine the Data ---
+# Bind the imputed numeric columns with the original non-numeric columns
+# This restores your original dataframe structure.
+train_data_x_imputed <- cbind(non_numeric_cols, numeric_cols_imputed)
+
+# View the first few rows to confirm it worked
+train_data
+```
+
+
+
+## histogram of covariates
+```{r}
+for (i in 1:length(data)){
+  covariate <- data[[i]]
+  if (is.numeric(covariate)){
+    hist(covariate, main = paste("Histogram of", names(data)[i] ), xlab = deparse(substitute(covariate)))
+  }
+}
+```
+
+```{r}
+summary(train_data)
+```
+
+
+```{r}
+num_cols = train_data %>% select_if(is.numeric)
+cor_matrix = cor(num_cols)
+round(cor_matrix, 2)
+```
+
+# investigation of claim sizes
+
+## Extreme value analysis of claimsizes
+```{r}
+nonzerosizes <- data[data$OUTCOME>0, "CLAIMS", drop = T]
+quantile(nonzerosizes, c(0.95,0.97, 0.99, 0.995))
+
+# mean excess plot
+mrlplot(nonzerosizes, xlim = c(0,45000))
+```
+
+- Mean excess function is rising, clearly a heavy tailed distribution
+
+```{r}
+# Fitting GEV distribution
+block_size <- 50
+blocks <- ceiling(seq_along(nonzerosizes) / block_size)
+GEVdf <- data.frame(nonzerosizes, blocks)
+block_maxima_df <- GEVdf %>%
+  group_by(blocks) %>%
+  summarise(
+    max_claim = max(nonzerosizes) 
+  )
+gev_fit <- extRemes::fevd(block_maxima_df$max_claim)
+summary(gev_fit)
+plot(gev_fit)
+```
+
+
+```{r}
+# Hypothesis test with H0: shape = 0
+# Assuming a normal distribution of the shape parameter estimator
+shape.estimate <- 0.219102
+shape.stderr <- 0.101009
+
+print(shape.estimate/shape.stderr)
+```
+- clearly, the shape parameter is significantly different from 0, so we can reject the null hypothesis of an exponential tail. It is quite obvious that we have a frechet type distribution of the nonzero claim sizess
+
+
+# investigating claim sizes
+```{r}
+hist(data[data$OUTCOME>0, "CLAIMS", drop = T], breaks = 100, main = "histogram of claim sizes when outcome = 1")
+summary(data[data$OUTCOME>0, "CLAIMS", drop = T])
+descdist(data[data$OUTCOME>0, "CLAIMS", drop = T])
+```
+- looks fat tailed
+
+
+Initial model
+```{r}
+size.0 <- glm(CLAIMS ~. - OUTCOME, data = data[data$OUTCOME >0,], family = Gamma(link = "log"))
+size.1 <- glm(CLAIMS ~. - OUTCOME, data = data[data$OUTCOME >0,], family = Gamma(link = "log"))
+summary(size.0)
+
+```
+
+
+

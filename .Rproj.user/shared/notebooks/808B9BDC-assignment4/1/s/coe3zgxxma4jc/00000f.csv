@@ -1,0 +1,2 @@
+"0","# histogram of type 1 standardised residuals"
+"0","hist(rstandard(claimsize.2.gamma), breaks = 100)"

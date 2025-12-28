@@ -1,0 +1,14 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYm94cGxvdChsaXN0KGBNZWRjb3N0c2AgPSBsb2coU1VWQSRtZWRjb3N0c1tTVVZBJG1lZGNvc3RzPjBdKSxcbiAgICAgICAgICAgICBgZGFpbHlhbGxvd2AgPSBsb2coU1VWQSRkYWlseWFsbG93W1NVVkEkZGFpbHlhbGxvdyA+MF0pKSlcbmBgYCJ9 -->
+
+```r
+boxplot(list(`Medcosts` = log(SUVA$medcosts[SUVA$medcosts>0]),
+             `dailyallow` = log(SUVA$dailyallow[SUVA$dailyallow >0])))
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+boxplot(list(`Medcosts` = log(SUVA$medcosts[SUVA$medcosts>0]),
+             `dailyallow` = log(SUVA$dailyallow[SUVA$dailyallow >0])))
+```"

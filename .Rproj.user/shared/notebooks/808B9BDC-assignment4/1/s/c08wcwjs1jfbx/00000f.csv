@@ -1,0 +1,6 @@
+"0","dir.create(""models"", showWarnings = FALSE)"
+"0","dir.create(""data"",   showWarnings = FALSE)"
+"0",""
+"0","saveRDS(outcome.3.logistic, ""models/outcome_3_logistic.rds"")"
+"0","saveRDS(claimsize.3.gamma,   ""models/claimsize_3_gamma.rds"")"
+"0","saveRDS(data,                 ""data/training_data.rds"")"

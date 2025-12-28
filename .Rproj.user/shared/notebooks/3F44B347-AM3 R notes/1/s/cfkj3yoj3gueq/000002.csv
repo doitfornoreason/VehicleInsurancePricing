@@ -1,0 +1,12 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdGRpc3RjZW5zKGNlbnNkYXRhLCBOUE1MRSA9IEZBTFNFKVxuYGBgIn0= -->
+
+```r
+plotdistcens(censdata, NPMLE = FALSE)
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+plotdistcens(censdata, NPMLE = FALSE)
+```"

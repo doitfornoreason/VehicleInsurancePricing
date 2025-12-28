@@ -1,0 +1,26 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBibG9jayBtYXhpbWEgaW5kZXhcbmNsYWltcyRibG9jayA8LSAoY2xhaW1zJG1vbnRoLSAxKSUvJTEyICsgMSAjICUvJSBpcyBtb2R1bG9cblxuXG4jIEZpbmRpbmcgdGhlIG1heGltdW0gb2YgZWFjaCBibG9ja1xuYmxvY2ttYXggPC0gdGliYmxlKGJldGFibG9jayA9IGFnZ3JlZ2F0ZShiZXRhfiBibG9jaywgY2xhaW1zLCBtYXgpJGJldGEsXG4gICAgICAgICAgICAgICAgICAgZ2FtbWJsb2NrID0gYWdncmVnYXRlKGdhbW1+IGJsb2NrLCBjbGFpbXMsIG1heCkkZ2FtbSxcbiAgICAgICAgICAgICAgICAgICBsb2dnYmxvY2sgPSBhZ2dyZWdhdGUobG9nZ34gYmxvY2ssIGNsYWltcywgbWF4KSRsb2dnKVxuYGBgIn0= -->
+
+```r
+# block maxima index
+claims$block <- (claims$month- 1)%/%12 + 1 # %/% is modulo
+
+
+# Finding the maximum of each block
+blockmax <- tibble(betablock = aggregate(beta~ block, claims, max)$beta,
+                   gammblock = aggregate(gamm~ block, claims, max)$gamm,
+                   loggblock = aggregate(logg~ block, claims, max)$logg)
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+# block maxima index
+claims$block <- (claims$month- 1)%/%12 + 1 # %/% is modulo
+
+
+# Finding the maximum of each block
+blockmax <- tibble(betablock = aggregate(beta~ block, claims, max)$beta,
+                   gammblock = aggregate(gamm~ block, claims, max)$gamm,
+                   loggblock = aggregate(logg~ block, claims, max)$logg)
+```"

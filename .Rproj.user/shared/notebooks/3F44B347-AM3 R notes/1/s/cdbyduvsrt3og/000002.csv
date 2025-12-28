@@ -1,0 +1,78 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBmaXR0aW5nIE1MRSBcbnBkZiA8LSBkZ2FtbWFcbmNkZiA8LSBwZ2FtbWFcbnggPC0gY2xhaW1zJHhcbmRlZHVjdCA8LSBjbGFpbXMkZGVkdWN0XG5saW1pdEkgPC0gY2xhaW1zJGxpbWl0SVxuIyBNTUUgZm9yIHN0YXJ0aW5nIHZhbHVlc1xuc3RhcnQgPC0gYyhtZWFuKHgpXjIvdmFyKHgpLCAgbWVhbih4KS92YXIoeCkpXG5cblxuIyBub3RlOiBuZWdsb2dsaWsgTkVFRFMgTElNSVQgSU5ESUNBVE9SISFcbm9iai5mdW4gPC0gZnVuY3Rpb24oc3RhcnQpIHtcbiAgcmV0dXJuKG5lZ2xvZ2xpayhwZGYsIGNkZiwgc3RhcnQsIHgsIGRlZHVjdCwgbGltaXRJKSlcbn0gIyB3ZSBub3cgaGF2ZSBhIGZ1bmN0aW9uIHRvIG1pbmltaXNlIHdydCBzaGFwZSBhbmQgcmF0ZVxuXG5vYmouZnVuKHN0YXJ0KVxuXG5nYW1tYS4xMS5maXQgPC0gb3B0aW0oc3RhcnQsIG9iai5mdW4sIGxvd2VyID0gYygwLDApKVxuXG4jIGZpdHRpbmcgd2l0aG91dCBhc3N1bWluZyB0cnVuY2F0aW9uL2NlbnNvcmluZyAobmFpdmUgZml0KVxubmFpdmUuZml0IDwtICBjb2VmKGZpdGRpc3QoY2xhaW1zJHgsIFwiZ2FtbWFcIiwgbWV0aG9kID0gXCJtbGVcIikpXG5cblxuIyBsZXRzIGNvbXBhcmUgdGhlIG5haXZlIGZpdCB3aXRoIHRoZSBmaXQgY29uc2lkZXJpbmcgdHJ1bmNhdGlvbi9jZW5zb3JpbmcgYW5kIHRoZSBvcmlnaW5hbCBmaXRcblxuc2ltLmNlbnMuZml0IDwtICByZ2FtbWEoMTAwMDAsIHNoYXBlID0gZ2FtbWEuMTEuZml0JHBhclsxXSwgcmF0ZSA9IGdhbW1hLjExLmZpdCRwYXJbMl0pICMgY29uc2lkZXJpbmcgY2VucyAmIHRydW5jXG5zaW0ubmFpdmUuZml0IDwtIHJnYW1tYSgxMDAwMCwgc2hhcGUgPSBuYWl2ZS5maXRbMV0sIHJhdGUgPSBuYWl2ZS5maXRbMl0pXG5cbnBsb3QoZWNkZihvcmlnX3gpLCBtYWluID0gJ0VDREYgcGxvdHMnLCBjb2wgPSAnYmxhY2snKVxubGluZXMoZWNkZihzaW0uY2Vucy5maXQpLCBjb2wgPSAnYmx1ZScsIHR5cGUgPSAncycpXG5saW5lcyhlY2RmKHNpbS5uYWl2ZS5maXQpLCBjb2wgPSAncmVkJywgdHlwZSA9ICdzJylcbmxlZ2VuZCgnYm90dG9tcmlnaHQnLCBsZWdlbmQgPSBjKCdvZyBkaXN0JywgJ211bHRpbGV2ZWwgZml0IChpLmUgYXNzdW1lIGNlbnMgYW5kIHRydW5jKScsICduYWl2ZScpLCBsdHkgPSAxLFxuICAgICAgIGNvbCA9IGMoJ2JsYWNrJywgJ2JsdWUnLCAncmVkJykpXG5cbmBgYCJ9 -->
+
+```r
+# fitting MLE 
+pdf <- dgamma
+cdf <- pgamma
+x <- claims$x
+deduct <- claims$deduct
+limitI <- claims$limitI
+# MME for starting values
+start <- c(mean(x)^2/var(x),  mean(x)/var(x))
+
+
+# note: negloglik NEEDS LIMIT INDICATOR!!
+obj.fun <- function(start) {
+  return(negloglik(pdf, cdf, start, x, deduct, limitI))
+} # we now have a function to minimise wrt shape and rate
+
+obj.fun(start)
+
+gamma.11.fit <- optim(start, obj.fun, lower = c(0,0))
+
+# fitting without assuming truncation/censoring (naive fit)
+naive.fit <-  coef(fitdist(claims$x, \"gamma\", method = \"mle\"))
+
+
+# lets compare the naive fit with the fit considering truncation/censoring and the original fit
+
+sim.cens.fit <-  rgamma(10000, shape = gamma.11.fit$par[1], rate = gamma.11.fit$par[2]) # considering cens & trunc
+sim.naive.fit <- rgamma(10000, shape = naive.fit[1], rate = naive.fit[2])
+
+plot(ecdf(orig_x), main = 'ECDF plots', col = 'black')
+lines(ecdf(sim.cens.fit), col = 'blue', type = 's')
+lines(ecdf(sim.naive.fit), col = 'red', type = 's')
+legend('bottomright', legend = c('og dist', 'multilevel fit (i.e assume cens and trunc)', 'naive'), lty = 1,
+       col = c('black', 'blue', 'red'))
+
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+# fitting MLE 
+pdf <- dgamma
+cdf <- pgamma
+x <- claims$x
+deduct <- claims$deduct
+limitI <- claims$limitI
+# MME for starting values
+start <- c(mean(x)^2/var(x),  mean(x)/var(x))
+
+
+# note: negloglik NEEDS LIMIT INDICATOR!!
+obj.fun <- function(start) {
+  return(negloglik(pdf, cdf, start, x, deduct, limitI))
+} # we now have a function to minimise wrt shape and rate
+
+obj.fun(start)
+
+gamma.11.fit <- optim(start, obj.fun, lower = c(0,0))
+
+# fitting without assuming truncation/censoring (naive fit)
+naive.fit <-  coef(fitdist(claims$x, \"gamma\", method = \"mle\"))
+
+
+# lets compare the naive fit with the fit considering truncation/censoring and the original fit
+
+sim.cens.fit <-  rgamma(10000, shape = gamma.11.fit$par[1], rate = gamma.11.fit$par[2]) # considering cens & trunc
+sim.naive.fit <- rgamma(10000, shape = naive.fit[1], rate = naive.fit[2])
+
+plot(ecdf(orig_x), main = 'ECDF plots', col = 'black')
+lines(ecdf(sim.cens.fit), col = 'blue', type = 's')
+lines(ecdf(sim.naive.fit), col = 'red', type = 's')
+legend('bottomright', legend = c('og dist', 'multilevel fit (i.e assume cens and trunc)', 'naive'), lty = 1,
+       col = c('black', 'blue', 'red'))
+
+```"

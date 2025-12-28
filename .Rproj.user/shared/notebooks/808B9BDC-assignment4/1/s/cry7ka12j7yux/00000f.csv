@@ -1,0 +1,62 @@
+"0","print(""TESTING FOR INDEPENDENCE OF CREDIT_SCORE EMPTINESS"")"
+"1","[1]"
+"1"," ""TESTING FOR INDEPENDENCE OF CREDIT_SCORE EMPTINESS"""
+"1","
+"
+"0","# Define the target variable: a binary indicator for missing credit scores"
+"0","credit_score_missing <- is.na(train_data$CREDIT_SCORE)"
+"0",""
+"0","# Get a list of all predictor variables to test, excluding ID and CREDIT_SCORE itself"
+"0","predictors_to_test <- setdiff(names(train_data), c(""ID"", ""CREDIT_SCORE""))"
+"0",""
+"0","# Loop through each predictor and perform the appropriate test"
+"0","for (var in predictors_to_test) {"
+"0","  "
+"0","  # Ignore any columns with no variation"
+"0","  if (length(unique(train_data[[var]])) < 2) next"
+"0","  "
+"0","  # --- Test for association with CONTINUOUS variables ---"
+"0","  if (is.numeric(train_data[[var]])) {"
+"0","    # We use a t-test to see if the mean of the numeric variable is"
+"0","    # different between the 'missing' and 'present' groups."
+"0","    test_result <- t.test(train_data[[var]] ~ credit_score_missing)"
+"0","    p_value <- test_result$p.value"
+"0","    cat(sprintf(""Variable: %-20s | Test: T-test         | P-value: %.4f\n"", var, p_value))"
+"0","    "
+"0","  # --- Test for association with CATEGORICAL variables ---"
+"0","  } else if (is.factor(train_data[[var]]) || is.character(train_data[[var]])) {"
+"0","    # We use a Chi-squared test for independence between two categorical variables."
+"0","    # We add 'simulate.p.value = TRUE' to handle cases with low expected counts."
+"0","    test_result <- chisq.test(table(train_data[[var]], credit_score_missing), simulate.p.value = TRUE)"
+"0","    p_value <- test_result$p.value"
+"0","    cat(sprintf(""Variable: %-20s | Test: Chi-squared    | P-value: %.4f\n"", var, p_value))"
+"0","  }"
+"0","}"
+"1","Variable: AGE                  | Test: Chi-squared    | P-value: 0.1544
+"
+"1","Variable: GENDER               | Test: Chi-squared    | P-value: 0.9025
+"
+"1","Variable: DRIVING_EXPERIENCE   | Test: Chi-squared    | P-value: 0.1494
+"
+"1","Variable: EDUCATION            | Test: Chi-squared    | P-value: 0.5927
+"
+"1","Variable: VEHICLE_OWNERSHIP    | Test: T-test         | P-value: 0.1828
+"
+"1","Variable: VEHICLE_YEAR         | Test: Chi-squared    | P-value: 0.0395
+"
+"1","Variable: MARRIED              | Test: T-test         | P-value: 0.4997
+"
+"1","Variable: CHILDREN             | Test: T-test         | P-value: 0.4530
+"
+"1","Variable: ANNUAL_MILEAGE       | Test: T-test         | P-value: 0.6424
+"
+"1","Variable: VEHICLE_TYPE         | Test: Chi-squared    | P-value: 0.4308
+"
+"1","Variable: SPEEDING_VIOLATIONS  | Test: T-test         | P-value: 0.7981
+"
+"1","Variable: PAST_ACCIDENTS       | Test: T-test         | P-value: 0.9907
+"
+"1","Variable: OUTCOME              | Test: T-test         | P-value: 0.7688
+"
+"1","Variable: CLAIMS               | Test: T-test         | P-value: 0.1725
+"

@@ -1,0 +1,6 @@
+"0","# observing tail behaviours of the errors"
+"0","gamma_model_errors <- pred_gamma - actual_claims"
+"0","gamma_model_errors_tail <- abs(gamma_model_errors[gamma_model_errors  < (-10)])"
+"0","lognormal_model_errors <- pred_lognormal - actual_claims"
+"0","lognormal_model_errors_tail <- abs(lognormal_model_errors[lognormal_model_errors  < (-10)])"
+"0",""

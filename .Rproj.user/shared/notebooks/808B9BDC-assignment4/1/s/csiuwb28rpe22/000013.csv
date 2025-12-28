@@ -1,0 +1,4 @@
+"0",""
+"0","num_cols = train_data_imputed %>% select_if(is.numeric)"
+"0","cor_matrix = cor(num_cols)"
+"0","corrplot(cor_matrix, type = ""lower"", diag = F)"

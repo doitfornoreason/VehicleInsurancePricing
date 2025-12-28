@@ -1,0 +1,5 @@
+"0","# investigating influential points further"
+"0","# correlation between variables when influential "
+"0","num_cols <- influential_points %>%"
+"0","  dplyr::select(where(is.numeric))"
+"0","corrplot(cor(num_cols), type = ""lower"", diag = F,tl.cex = 0.7)"

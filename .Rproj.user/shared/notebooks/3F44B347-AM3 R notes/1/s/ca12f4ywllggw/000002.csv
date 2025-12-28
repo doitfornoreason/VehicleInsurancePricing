@@ -1,0 +1,12 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucXVhbnRpbGUoU1VWQSRtZWRjb3N0c1tTVVZBJG1lZGNvc3RzPjBdKVxuYGBgIn0= -->
+
+```r
+quantile(SUVA$medcosts[SUVA$medcosts>0])
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+quantile(SUVA$medcosts[SUVA$medcosts>0])
+```"

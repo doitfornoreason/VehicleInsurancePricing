@@ -1,0 +1,4 @@
+"0","# plot errors"
+"0",""
+"0","hist(pred_gamma - actual_claims, breaks = 100, xlim = c(-80000, 40000),"
+"0","     main = 'gamma model errors')"
