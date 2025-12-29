@@ -13,10 +13,9 @@ Acknowledging the heavy tailed nature of insurance data:
 - Extreme Value Theory (EVT) analysis was conducted
 
 ## Model selection
-Instead of black-box Machine Learning models, GLMs were utilised for their explainability, using the standard frequency-severity approach to calculate pure premiums for individuals. i.e:
-$$
-\text{Pure premium for policy holder }i = P(\text{nonzero claim from policy holder }i) \times E(\text{Claim size }|\text{ nonzero claim from policy holder }i)
-$$
+Instead of black-box Machine Learning models, GLMs were utilised for their explainability, using the standard frequency-severity approach to calculate pure premiums for individuals. i.e:\
+
+$$\text{Pure premium for policy holder }i = P(\text{nonzero claim from policy holder }i) \times E(\text{Claim size }|\text{ nonzero claim from policy holder }i)$$
 
 ## Deployment
 Shiny was a natural tool to publish the pricing app, as this project was conducted in RStudio
