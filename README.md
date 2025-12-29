@@ -21,4 +21,4 @@ $$
 ## Deployment
 Shiny was a natural tool to publish the pricing app, as this project was conducted in RStudio
 
-![[pricingapp1.jpg]]
+![alt text](https://github.com/doitfornoreason/VehicleInsurancePricing/blob/main/pricingapp1.jpg "Pricing App")
