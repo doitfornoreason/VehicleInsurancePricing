@@ -1,5 +1,5 @@
 - Pricing pure premiums for vehicle insurance policy holders
-- Extension of an assignment in ACTL30008. View the report here [report/ACTL30004report.pdf]
+- Extension of an assignment in ACTL30008. View the report [here](report/ACTL30004report.pdf)
 - Data is simulated
 - To access the pricing app, visit: [https://doitfornoreason.shinyapps.io/VehicleInsurancePricing/](https://doitfornoreason.shinyapps.io/VehicleInsurancePricing/)
 # Brief description:
