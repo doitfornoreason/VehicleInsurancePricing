@@ -1,6 +1,5 @@
 - Pricing pure premiums for vehicle insurance policy holders
 -  [Analysis report](Report/report.pdf)
-- Data is simulated
 - To access the pricing app, visit: [here](https://doitfornoreason.shinyapps.io/VehicleInsurancePricing/)
 # Brief description:
 ## Pre-processing and EDA
