@@ -1,0 +1,9 @@
+---
+title: "Bayesiananalysis"
+output: html_document
+---
+
+```{r}
+install.packages("renv")
+```
+
